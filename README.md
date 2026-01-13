@@ -69,8 +69,8 @@ Frontend (React/Vite) → Azure Functions API → Azure OpenAI (via Managed Iden
 ### 1. Clone and Install
 
 ```bash
-git clone https://github.com/mkuma_microsoft/prompt-to-prototype-challenge.git
-cd prompt-to-prototype-challenge
+git clone https://github.com/muralikumard/team-pulse-agent-prototype.git
+cd team-pulse-agent-prototype
 npm install
 ```
 
