@@ -1,0 +1,386 @@
+/* App.css - TeamPulse Agent styling */
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #334155;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Logo styling */
+.app-logo {
+  height: 50px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.app-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Enhanced Header styling */
+.app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 20px;
+  gap: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.app-header p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Enhanced form styling */
+form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea {
+  transition: all 0.2s ease;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Enhanced button styling */
+button {
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Search container styling */
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 90%;
+  padding: 12px 15px;
+  padding-right: 40px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-clear-button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  padding: 4px;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.search-clear-button:hover {
+  color: #ef4444;
+  background-color: #fef2f2;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Enhanced category badge styling */
+.category-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.category-Feature {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+}
+
+.category-Bug-Fix {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.category-Process {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #059669;
+  border: 1px solid #6ee7b7;
+}
+
+.category-Team {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+  color: #ea580c;
+  border: 1px solid #fb923c;
+}
+
+.category-Learning {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #5b21b6;
+  border: 1px solid #a5b4fc;
+}
+
+/* Enhanced accomplishment list styling */
+.accomplishments-list {
+  max-height: none;
+  overflow: visible;
+  border: none;
+  border-radius: 8px;
+  padding: 0;
+  background: transparent;
+}
+
+.accomplishments-list li {
+  background: white;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.accomplishments-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.accomplishments-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Action buttons styling */
+.action-button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.delete-button {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+/* Enhanced executive summary styling */
+.executive-summary-content {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+  line-height: 1.7;
+}
+
+.executive-summary-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.executive-summary-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.executive-summary-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+  border-radius: 10px;
+}
+
+.executive-summary-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+/* Enhanced responsive design */
+@media (max-width: 600px) {
+  .date-filter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .logo-title-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .app-logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .app-header {
+    padding: 15px;
+  }
+}
+
+/* For larger screens, make the header layout horizontal */
+@media (min-width: 768px) {
+  .app-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-title-container {
+    flex: 1;
+  }
+}
+
+/* Enhanced loading spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  gap: 10px;
+}
+
+/* Enhanced card styling for sections */
+section {
+  transition: all 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Print-friendly executive summary */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .executive-summary-content, .executive-summary-content * {
+    visibility: visible;
+  }
+  
+  .executive-summary-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 2cm;
+  }
+  
+  .app-header {
+    background: none !important;
+    color: black !important;
+  }
+}
+
+/* Enhanced modal styling */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

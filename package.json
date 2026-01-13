@@ -1,0 +1,24 @@
+{
+  "name": "vibe-coding-starter",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node .azure/copy-config.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@azure/msal-browser": "^4.22.0",
+    "@azure/msal-react": "^3.0.19",
+    "@azure/openai": "^2.0.0",
+    "marked": "^16.2.1",
+    "openai": "^5.19.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^7.2.7"
+  }
+}
